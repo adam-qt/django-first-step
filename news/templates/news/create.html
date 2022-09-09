@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}
+create
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+    <div class="f1">
+    <form  method="post" >
+
+        {% csrf_token %}
+        {{ form.title }} <br>
+        {{ form.annotation }}<br>
+        {{ form.text }}<br>
+        {{ form.date }}<br>
+        <button class="btn btn-success" type="submit"> Добавить статью </button>
+    </form>
+
+    </div>
+    </div>
+{% endblock %}

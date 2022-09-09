@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %} {% endblock %}</title>
+    <link type="text/css" href="{% static 'main/css/style.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+</head>
+<body class="body1">
+    <aside class="as">
+
+        <ul>
+          <a class="n" href="{% url 'home' %} ">  <li> <i class="fas fa-home"></i>  Главная</li> </a>
+          <a  class="n" href="{% url 'about' %}">  <li><i class="fas fa-id-card"></i>    О нас</li></a>
+            <a class="n" href="{% url 'news_home' %}"> <li><i class="far fa-newspaper"></i> Новости</li></a>
+            <a class="n" href=""> <li><i class="fas fa-paper-plane"></i> Контакты</li></a>
+           <a class="n" href="{% url 'create' %}"> <li> <button class="btn btn-info"><i class="fas fa-plus-circle"></i>  добавить запись</button></li></a>
+
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <p class="tit"> titititititit </p>
+</body>
+</html>
